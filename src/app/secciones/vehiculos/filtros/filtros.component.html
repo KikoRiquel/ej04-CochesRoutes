@@ -1,0 +1,154 @@
+<table class="table table-striped">
+  <thead class="thead-light">
+    <tr>
+      <th>MODELO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div class="form-group">
+          <input
+            #modelo
+            (keyup)="setModFilter(modelo.value)"
+            type="text"
+            class="form-control"
+            id="modelo"
+            placeholder="Nombre del modelo"
+          />
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table id="fabFilters" class="table table-striped">
+  <thead class="thead-light">
+    <tr>
+      <th>FABRICANTE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div class="form-group">
+          <label for="fabList">Elige un fabricante</label>
+          <select
+            #fab
+            class="form-control"
+            id="fabList"
+            (change)="setFabFilter(fab.value)"
+          >
+            <option value="0">(Elige un fabricante)</option>
+            <option *ngFor="let f of getFabricantes()" value="{{ f.id }}">
+              {{ f.text }}
+            </option>
+          </select>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="fab1"
+            checked
+          />
+          <label class="form-check-label" for="fab1">Fabricante1</label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="fab2"
+            checked
+          />
+          <label class="form-check-label" for="fab2">Fabricante2</label>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table id="tecFilters" class="table table-striped">
+  <thead class="thead-light">
+    <tr>
+      <th>TECNOLOGÍA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div class="form-group">
+          <label for="techList">Elige una tecnología</label>
+          <select
+            #tec
+            class="form-control"
+            id="techList"
+            (change)="setTecFilter(tec.value)"
+          >
+            <option value="0">(Elige una tecnología)</option>
+            <option *ngFor="let tec of getTecnologias()" value="{{ tec.id }}">
+              {{ tec.text }}
+            </option>
+          </select>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="tec1"
+            checked
+          />
+          <label class="form-check-label" for="tec1">Tecnología1</label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="tec2"
+            checked
+          />
+          <label class="form-check-label" for="tec2">Tecnología2</label>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-striped">
+  <thead class="thead-light">
+    <tr>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div class="form-group">
+          <input
+            #precioMin
+            type="number"
+            class="form-control"
+            id="precio"
+            placeholder="Precio mínimo"
+            min="1"
+            max="9999999"
+          />
+          <input
+            #precioMax
+            type="number"
+            class="form-control"
+            id="precio"
+            placeholder="Precio máximo"
+            min="precioMin.value"
+            max="9999999"
+          />
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-primary" id="resetFilters">Borrar filtros</button>

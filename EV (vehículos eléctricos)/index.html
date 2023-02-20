@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es" ng-app="encuentros">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<title>Vehículos eléctricos - jQuery</title>
+	<style type="text/css">
+		#titulo {
+			display: flex;
+			align-self: flex-end;
+		}
+		.content {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-2"><img src="img/logo.png"></div>
+			<div class="col-lg-10" id="titulo"><h1> EV - Tu base de datos de vehículos eléctricos</h1></div>
+		</div>
+		<div class="row">
+			<div class="col-lg-3">
+				<table class="table table-striped">
+					<thead class="thead-light">
+						<tr><th>MODELO</th></tr>
+					</thead>
+					<tbody>
+						<tr><td>
+							<div class="form-group">
+								<input type="text" class="form-control" id="modelo" placeholder="Nombre del modelo">
+							</div>
+						</td></tr>
+					</tbody>
+				</table>
+				<table id="fabFilters" class="table table-striped">
+					<thead class="thead-light">
+						<tr><th>FABRICANTE</th></tr>
+					</thead>
+					<tbody>
+						<tr><td>
+							<div class="form-group">
+								<label for="fabList">Elige un fabricante</label>
+								<select class="form-control" id="fabList">
+									<option value="0">(Elige un fabricante)</option>
+									<!-- RELLENAR CON UN LISTADO DE TODOS LOS FABRICANTES -->
+								</select>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="fab1" checked>
+								<label class="form-check-label" for="fab1">Fabricante1</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="fab2" checked>
+								<label class="form-check-label" for="fab2">Fabricante2</label>
+							</div>
+						</td></tr>
+					</tbody>
+				</table>
+				<table id="tecFilters" class="table table-striped">
+					<thead class="thead-light">
+						<tr><th>TECNOLOGÍA</th></tr>
+					</thead>
+					<tbody>
+						<tr><td>
+							<div class="form-group">
+								<label for="techList">Elige una tecnología</label>
+								<select class="form-control" id="techList">
+									<option value="0">(Elige una tecnología)</option>
+									<!-- RELLENAR CON UN LISTADO DE TODOS LAS TECNOLOGÍAS -->
+								</select>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="tec1" checked>
+								<label class="form-check-label" for="tec1">Tecnología1</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="tec2" checked>
+								<label class="form-check-label" for="tec2">Tecnología2</label>
+							</div>
+						</td></tr>
+					</tbody>
+				</table>
+				<button class="btn btn-primary" id="resetFilters">Borrar filtros</button>
+			</div>
+			<div id="modelos" class="col-lg-9">
+				<div class="row row-cols-md-5">
+					<!-- RELLENAR CON UN LISTADO DE TODOS LOS MODELOS -->
+				</div>
+			</div>
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+	
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+	</script> -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
+	<!-- JavaScript -->
+	<script type="text/javascript" src="ev_resuelto2.js"></script>
+</body>
+
+</html>

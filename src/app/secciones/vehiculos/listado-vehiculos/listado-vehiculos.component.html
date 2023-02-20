@@ -1,0 +1,16 @@
+<div *ngIf="!getVehiculos()" class="spinner-border" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+
+<div id="listaV" class="row row-cols-4">
+  <app-tarjeta-vehiculo
+    *ngFor="
+      let v of getVehiculos()
+        | porFabricante : getFabFilter()
+        | porTecnologia : getTecFilter()
+        | porModelo : getModFilter()
+    "
+    [vehiculo]="v"
+  >
+  </app-tarjeta-vehiculo>
+</div>

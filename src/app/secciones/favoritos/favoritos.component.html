@@ -1,0 +1,5 @@
+<div id="listaV" class="row row-cols-4">
+  <app-tarjeta-vehiculo *ngFor="let id of getFavs()"
+                        [vehiculo]="getCocheById(id)">
+  </app-tarjeta-vehiculo>
+</div>
